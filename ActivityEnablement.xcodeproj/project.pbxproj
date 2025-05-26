@@ -6,14 +6,73 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		73CB23D32DE4419B00246167 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CB23D22DE4419B00246167 /* WidgetKit.framework */; };
+		73CB23D52DE4419B00246167 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CB23D42DE4419B00246167 /* SwiftUI.framework */; };
+		73CB23E22DE4419D00246167 /* ActivityEnablementWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73CB23D02DE4419B00246167 /* ActivityEnablementWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73CB23E02DE4419D00246167 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73CB23B32DE4417A00246167 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73CB23CF2DE4419B00246167;
+			remoteInfo = ActivityEnablementWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73CB23E72DE4419D00246167 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				73CB23E22DE4419D00246167 /* ActivityEnablementWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		73CB23BB2DE4417A00246167 /* ActivityEnablement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityEnablement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73CB23D02DE4419B00246167 /* ActivityEnablementWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActivityEnablementWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		73CB23D22DE4419B00246167 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		73CB23D42DE4419B00246167 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		73CB23E32DE4419D00246167 /* Exceptions for "ActivityEnablementWidgets" folder in "ActivityEnablementWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 73CB23CF2DE4419B00246167 /* ActivityEnablementWidgetsExtension */;
+		};
+		73CB23EB2DE4420400246167 /* Exceptions for "ActivityEnablementWidgets" folder in "ActivityEnablement" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ActivityEnablementWidgetsAttributes.swift,
+			);
+			target = 73CB23BA2DE4417A00246167 /* ActivityEnablement */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		73CB23BD2DE4417A00246167 /* ActivityEnablement */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ActivityEnablement;
+			sourceTree = "<group>";
+		};
+		73CB23D62DE4419B00246167 /* ActivityEnablementWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				73CB23EB2DE4420400246167 /* Exceptions for "ActivityEnablementWidgets" folder in "ActivityEnablement" target */,
+				73CB23E32DE4419D00246167 /* Exceptions for "ActivityEnablementWidgets" folder in "ActivityEnablementWidgetsExtension" target */,
+			);
+			path = ActivityEnablementWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +85,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73CB23CD2DE4419B00246167 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73CB23D52DE4419B00246167 /* SwiftUI.framework in Frameworks */,
+				73CB23D32DE4419B00246167 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				73CB23BD2DE4417A00246167 /* ActivityEnablement */,
+				73CB23D62DE4419B00246167 /* ActivityEnablementWidgets */,
+				73CB23D12DE4419B00246167 /* Frameworks */,
 				73CB23BC2DE4417A00246167 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +111,18 @@
 			isa = PBXGroup;
 			children = (
 				73CB23BB2DE4417A00246167 /* ActivityEnablement.app */,
+				73CB23D02DE4419B00246167 /* ActivityEnablementWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		73CB23D12DE4419B00246167 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73CB23D22DE4419B00246167 /* WidgetKit.framework */,
+				73CB23D42DE4419B00246167 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +135,12 @@
 				73CB23B72DE4417A00246167 /* Sources */,
 				73CB23B82DE4417A00246167 /* Frameworks */,
 				73CB23B92DE4417A00246167 /* Resources */,
+				73CB23E72DE4419D00246167 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				73CB23E12DE4419D00246167 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				73CB23BD2DE4417A00246167 /* ActivityEnablement */,
@@ -69,6 +151,28 @@
 			productName = ActivityEnablement;
 			productReference = 73CB23BB2DE4417A00246167 /* ActivityEnablement.app */;
 			productType = "com.apple.product-type.application";
+		};
+		73CB23CF2DE4419B00246167 /* ActivityEnablementWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73CB23E42DE4419D00246167 /* Build configuration list for PBXNativeTarget "ActivityEnablementWidgetsExtension" */;
+			buildPhases = (
+				73CB23CC2DE4419B00246167 /* Sources */,
+				73CB23CD2DE4419B00246167 /* Frameworks */,
+				73CB23CE2DE4419B00246167 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				73CB23D62DE4419B00246167 /* ActivityEnablementWidgets */,
+			);
+			name = ActivityEnablementWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = ActivityEnablementWidgetsExtension;
+			productReference = 73CB23D02DE4419B00246167 /* ActivityEnablementWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +185,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					73CB23BA2DE4417A00246167 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					73CB23CF2DE4419B00246167 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -100,12 +207,20 @@
 			projectRoot = "";
 			targets = (
 				73CB23BA2DE4417A00246167 /* ActivityEnablement */,
+				73CB23CF2DE4419B00246167 /* ActivityEnablementWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		73CB23B92DE4417A00246167 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73CB23CE2DE4419B00246167 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +237,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73CB23CC2DE4419B00246167 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73CB23E12DE4419D00246167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73CB23CF2DE4419B00246167 /* ActivityEnablementWidgetsExtension */;
+			targetProxy = 73CB23E02DE4419D00246167 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		73CB23C72DE4417C00246167 /* Debug */ = {
@@ -255,6 +385,7 @@
 				DEVELOPMENT_TEAM = LBC5DS5WB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +415,7 @@
 				DEVELOPMENT_TEAM = LBC5DS5WB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +428,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.genebogdanovich.ActivityEnablement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		73CB23E52DE4419D00246167 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LBC5DS5WB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityEnablementWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ActivityEnablementWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.genebogdanovich.ActivityEnablement.ActivityEnablementWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73CB23E62DE4419D00246167 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LBC5DS5WB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityEnablementWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ActivityEnablementWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.genebogdanovich.ActivityEnablement.ActivityEnablementWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +505,15 @@
 			buildConfigurations = (
 				73CB23CA2DE4417C00246167 /* Debug */,
 				73CB23CB2DE4417C00246167 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73CB23E42DE4419D00246167 /* Build configuration list for PBXNativeTarget "ActivityEnablementWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73CB23E52DE4419D00246167 /* Debug */,
+				73CB23E62DE4419D00246167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

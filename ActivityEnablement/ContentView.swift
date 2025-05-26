@@ -6,16 +6,37 @@
 //
 
 import SwiftUI
+import ActivityKit
 
 struct ContentView: View {
+    @State private var task: Task<Void, Never>?
+    @State private var currentActivity: Activity<ActivityEnablementWidgetsAttributes>?
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Button("Start") {
+            
+            do {
+                let attributes = ActivityEnablementWidgetsAttributes(name: "Cute Emoji")
+                let state = ActivityEnablementWidgetsAttributes.ContentState(emoji: "😜")
+                
+                let activity = try Activity.request(attributes: attributes, content: .init(state: state, staleDate: nil))
+                self.currentActivity = activity
+            } catch {
+                print("❌\(error)")
+            }
         }
-        .padding()
+        .onAppear {
+            
+            print("👻areActivitiesEnabled: \(ActivityAuthorizationInfo().areActivitiesEnabled)")
+            
+            self.task = Task {
+                
+                for await update in ActivityAuthorizationInfo().activityEnablementUpdates {
+                    print("🥳\(update)")
+                }
+                
+                
+            }
+        }
     }
 }
 

@@ -9,16 +9,6 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct ActivityEnablementWidgetsAttributes: ActivityAttributes {
-    public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var emoji: String
-    }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
-}
-
 struct ActivityEnablementWidgetsLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ActivityEnablementWidgetsAttributes.self) { context in
