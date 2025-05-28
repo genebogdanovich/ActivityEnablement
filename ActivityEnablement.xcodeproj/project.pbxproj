@@ -44,6 +44,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		73373E922DE6D628000941A4 /* Exceptions for "ActivityEnablement" folder in "ActivityEnablement" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 73CB23BA2DE4417A00246167 /* ActivityEnablement */;
+		};
 		73CB23E32DE4419D00246167 /* Exceptions for "ActivityEnablementWidgets" folder in "ActivityEnablementWidgetsExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -63,6 +70,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		73CB23BD2DE4417A00246167 /* ActivityEnablement */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				73373E922DE6D628000941A4 /* Exceptions for "ActivityEnablement" folder in "ActivityEnablement" target */,
+			);
 			path = ActivityEnablement;
 			sourceTree = "<group>";
 		};
@@ -385,6 +395,8 @@
 				DEVELOPMENT_TEAM = LBC5DS5WB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityEnablement/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for demonstrative purposes.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -415,6 +427,8 @@
 				DEVELOPMENT_TEAM = LBC5DS5WB6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityEnablement/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for demonstrative purposes.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
