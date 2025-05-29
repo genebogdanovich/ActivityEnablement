@@ -26,6 +26,9 @@ struct ContentView: View {
     
     @State private var trackPoints: [TrackPoint] = []
     
+    
+    private let activityAuthorizationInfo = ActivityAuthorizationInfo()
+    
     var body: some View {
         List {
             Button("Start Location Tracking & Live Activity") {
@@ -71,7 +74,7 @@ struct ContentView: View {
         }
         .onAppear {
             
-            print("👻areActivitiesEnabled: \(ActivityAuthorizationInfo().areActivitiesEnabled)")
+            print("👻areActivitiesEnabled: \(activityAuthorizationInfo.areActivitiesEnabled)")
             
             self.permissionTrackingTask = Task {
                 
@@ -80,7 +83,7 @@ struct ContentView: View {
                 
                 
                 
-                for await update in ActivityAuthorizationInfo().activityEnablementUpdates {
+                for await update in activityAuthorizationInfo.activityEnablementUpdates {
                     print("🥳\(update)")
                 }
                 
